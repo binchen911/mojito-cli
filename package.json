@@ -3,7 +3,7 @@
   "version": "0.0.0PR1",
   "description": "command line utilities for mojito",
   "bin": {
-    "mo": "bin/mojito"
+    "mojito": "bin/mojito"
   },
   "preferGlobal": true,
   "dependencies": {
@@ -16,7 +16,7 @@
     "istanbul": "~0.1.32"
   },
   "scripts": {
-    "preinstall": "#npm rm -g mojito",
+    "preinstall": "npm rm -sg mojito",
     "test": "tape tests/*.js | tee tests/results.tap",
     "cover": "istanbul cover --dir artifacts/coverage node_modules/.bin/tape tests/*.js",
     "plato": "plato -d artifacts/plato *.js"
